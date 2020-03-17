@@ -21,3 +21,13 @@ body {
 	max-width: 1300px;
 	margin: 0 auto;
 }
+
+.int_left {
+	width: 25%;
+	float: left;
+}
+
+.int_right {
+	width: 75%;
+	float: left;
+}
