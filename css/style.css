@@ -99,6 +99,42 @@ hr {
 	top: 40px
 }
 
+.main .pic_container {
+	text-align: center;
+	padding: 20px 0;
+}
+
+.main .pic_container .avatar {
+	margin: auto;
+	width: 100%;
+	height: 100%;
+	max-width: 175px;
+	max-height: 175px;
+	border-radius: 50% 50% 48% 53%;
+	border: 4px solid #3090b6;
+}
+
+.main .pic_container .avatar  img {
+	max-width: 100%;
+	width: 140px;
+	height: auto;
+}
+
+.main .pic_container span {
+	display: block;
+}
+
+.main .pic_container span.zh_name {
+	color: #3090b6;
+	font-size: 2.5rem;
+	font-weight: bold;
+}
+
+.main .pic_container span.eng_name {
+	font-size: 1.2rem;
+	font-weight: bold;
+}
+
 .main .aside ul {
 	list-style-type: none;
 	margin: 0;
@@ -114,6 +150,7 @@ hr {
 
 .main .aside ul li h6 {
 	font-size: 18px;
+	font-weight: bold;
 	padding: 10px;
 	background-color: #3090b6;
 	color: #ffffff;
@@ -161,12 +198,12 @@ hr {
 .main .article section .work_header::after {
 	content: "";
 	display: block;
-	border-top: 22px solid transparent;
-	border-bottom: 22px solid transparent;
+	border-top: 17.5px solid transparent;
+	border-bottom: 17.5px solid transparent;
 	border-left: 30px solid #3090b6;
 	position: relative;
-	top: 44px;
-	left: -517px;
+	top: 34px;
+	left: -516px;
 	-moz-transform: translate(-50%, -100%);
 	-ms-transform: translate(-50%, -100%);
 	-webkit-transform: translate(-50%, -100%);
@@ -177,21 +214,21 @@ hr {
 	color: #fff;
 	text-align: center;
 	background-color: #3090b6;
-	padding: 10px;
+	padding: 5px 0;
 	margin: auto;
 	width: 25%;
 }
 
 .main .article section .work_header .work_name {
 	font-weight: bold;
-	padding: 10px 10px 10px 40px;
+	padding: 5px 0px 5px 40px;
 	margin: auto;
 	width: 55%;
 }
 
 .main .article section .work_header .work_position {
 	font-weight: bold;
-	padding: 10px;
+	padding: 5px 0;
 	margin: auto;
 	width: 20%;
 }
@@ -199,6 +236,11 @@ hr {
 .main .article section .work_body .experience span {
 	display: block;
 }
+
+
+
+
+
 
 
 
