@@ -334,9 +334,13 @@ img {
 
 .main .article .art_body section .work_body .experience span.project a {
 	border-bottom: 1px solid #3090b6;
+	padding-bottom: 1px;
 }
 
-.main .article .art_body section .work_body .experience span.project a:hover {
+.main .article .art_body section .work_body .experience span.project a:hover,
+.main .article .art_body section .work_body .experience span.project a.active:hover,
+.main .article .art_body section .work_body .experience span.project a:focus,
+.main .article .art_body section .work_body .experience span.project a.active:focus  {
 	border-bottom: 1px solid #005da2;
 }
 
@@ -363,16 +367,27 @@ img {
 	padding: 15px;
 }
 
-.back_top {
-	width: 34px;
-	height: 30px;
+.footer a {
+	color: #ccc;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 1px;
+}
 
-	right: 40px;
-	bottom: 40px;
+.footer a:hover,
+.footer a.active:hover,
+.footer a:focus,
+.footer a.active:focus {
+	color: #005da2;
+	border-color: #005da2;
+}
+
+.back_top {
+	right: 20px;
+	bottom: 20px;
 	position: fixed;
 	display: none;
 }
-	/* 滑鼠形狀 */
+
 .mousey {
 	margin: 0px auto;
 	width: 3px;
@@ -384,7 +399,7 @@ img {
 	box-sizing: content-box;
 	cursor:pointer;
 }
-	/* 滾輪形狀 */
+
 .scroller {
 	margin: 0px auto;
 	width: 3px;
@@ -400,9 +415,11 @@ img {
 	-webkit-animation-iteration-count: infinite;
 	animation-iteration-count: infinite;
 }
+
 .back_top .arrow {
 	display: none;
 }
+
 @keyframes scroll {
 	0% {
 		-webkit-transform: translateY(0);
@@ -418,14 +435,6 @@ img {
 		opacity: 0;
 	}
 }
-
-
-
-
-
-
-
-
 
 /*
 .aside {
