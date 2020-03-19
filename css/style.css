@@ -46,6 +46,11 @@ hr {
 	margin: 10px 20px;
 }
 
+img {
+	max-width: 100%;
+	height: auto;
+}
+
 .bg_block {
 	width: 0%;
 	height: 100%;
@@ -71,12 +76,6 @@ hr {
 
 .row {
 	margin: auto;
-}
-
-.row::after {
-	content: "";
-	clear: both;
-	display: table;
 }
 
 [class*="col-"] {
@@ -152,6 +151,7 @@ hr {
 .main .aside ul li h6 {
 	font-size: 18px;
 	font-weight: bold;
+	text-align: center;
 	padding: 10px;
 	background-color: #3090b6;
 	color: #ffffff;
@@ -187,24 +187,25 @@ hr {
 }
 
 .main .article section {
-	margin: 5px auto;
+	margin: 20px auto;
 }
 
 .main .article section .work_header {
 	background-color: #e7e7e7;
 	display:-webkit-flex;
 	display:flex;
+	position: relative;
 }
 
-.main .article section .work_header::after {
+.main .article section .work_header::before {
 	content: "";
-	display: block;
+	display: inline-block;
 	border-top: 17.5px solid transparent;
 	border-bottom: 17.5px solid transparent;
 	border-left: 30px solid #3090b6;
-	position: relative;
+	position: absolute;
 	top: 34px;
-	left: -516px;
+	left: 200px;
 	-moz-transform: translate(-50%, -100%);
 	-ms-transform: translate(-50%, -100%);
 	-webkit-transform: translate(-50%, -100%);
@@ -234,8 +235,12 @@ hr {
 	width: 20%;
 }
 
+.main .article section .work_body .experience {
+	position: relative;
+}
+
 .main .article section .work_body .experience span {
-	display: inline-block;
+	display: block;
 	margin: 0.2rem 0;
 }
 
@@ -251,15 +256,18 @@ hr {
 
 .main .article section .work_body .experience span.project {
 	text-indent: 0.5rem;
-	width: 100%;
 }
 
 .main .article section .work_body .experience span.site_link {
 	text-indent: 3rem;
-	width: 100%;
 }
 
-
+.main .article section .work_body .experience img.qr_code {
+	width: 100px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
 
 
 .footer {
