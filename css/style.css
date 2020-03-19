@@ -238,11 +238,11 @@ img {
 	width: calc(95% - 180px);
 }
 
-.main .article section {
+.main .article .art_body section {
 	margin: 20px auto;
 }
 
-.main .article section .work_header {
+.main .article .art_body section .work_header {
 	background-color: #e7e7e7;
 	display:-webkit-flex;
 	display:flex;
@@ -250,19 +250,19 @@ img {
 	cursor: pointer;
 }
 
-.main .article section .work_header:hover {
+.main .article .art_body section .work_header:hover {
 	background-color: #bfbfbf;
 }
 
-.main .article section .work_header:hover time {
+.main .article .art_body section .work_header:hover time {
 	background-color: #0099cc;
 }
 
-.main .article section .work_header:hover::before {
+.main .article .art_body section .work_header:hover::before {
 	border-left-color: #0099cc;
 }
 
-.main .article section .work_header::before {
+.main .article .art_body section .work_header::before {
 	content: "";
 	display: inline-block;
 	border-top: 17.5px solid transparent;
@@ -277,7 +277,7 @@ img {
 	transform: translate(-50%, -100%);
 }
 
-.main .article section .work_header time {
+.main .article .art_body section .work_header time {
 	color: #fff;
 	text-align: center;
 	background-color: #3090b6;
@@ -286,34 +286,34 @@ img {
 	width: 25%;
 }
 
-.main .article section .work_header .work_name {
+.main .article .art_body section .work_header .work_name {
 	font-weight: bold;
 	padding: 5px 0px 5px 40px;
 	margin: auto;
 	width: 55%;
 }
 
-.main .article section .work_header .work_position {
+.main .article .art_body section .work_header .work_position {
 	font-weight: bold;
 	padding: 5px 0;
 	margin: auto;
 	width: 20%;
 }
 
-.main .article section .work_body {
+.main .article .art_body section .work_body {
 	display: none;
 }
 
-.main .article section .work_body .experience {
+.main .article .art_body section .work_body .experience {
 	position: relative;
 }
 
-.main .article section .work_body .experience span {
+.main .article .art_body section .work_body .experience span {
 	display: block;
 	margin: 0.2rem 0;
 }
 
-.main .article section .work_body .experience span:first-of-type::before {
+.main .article .art_body section .work_body .experience span:first-of-type::before {
 	content: "";
 	display: inline-block;
 	width: 16px;
@@ -323,19 +323,25 @@ img {
 	margin-right: 0.5rem;
 }
 
-.main .article section .work_body .experience span.project {
+.main .article .art_body section .work_body .experience span.project {
 	text-indent: 0.5rem;
 }
 
-.main .article section .work_body .experience span.site_link {
+.main .article .art_body section .work_body .experience span.site_link {
 	text-indent: 3rem;
 }
 
-.main .article section .work_body .experience img.qr_code {
+.main .article .art_body section .work_body .experience img.qr_code {
 	width: 100px;
 	position: absolute;
 	top: 0;
 	right: 0;
+}
+
+.main .article .art_body section .license .license_name {
+	display: block;
+	float: left;
+	margin: 0.2rem 2rem 0.2rem 1rem;
 }
 
 .footer {
