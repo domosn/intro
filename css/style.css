@@ -336,7 +336,61 @@ img {
 	padding: 15px;
 }
 
+.back_top {
+	width: 34px;
+	height: 30px;
 
+	right: 40px;
+	bottom: 40px;
+	position: fixed;
+	display: none;
+}
+	/* 滑鼠形狀 */
+.mousey {
+	margin: 0px auto;
+	width: 3px;
+	padding: 3px 12px;
+	height: 36px;
+	border: 1px solid #000;
+	border-radius: 25px;
+	opacity: 0.75;
+	box-sizing: content-box;
+	cursor:pointer;
+}
+	/* 滾輪形狀 */
+.scroller {
+	margin: 0px auto;
+	width: 3px;
+	height: 10px;
+	border-radius: 25%;
+	background-color: #000;
+	-webkit-animation-name: scroll;
+	animation-name: scroll;
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-timing-function: cubic-bezier(0.15, 0.41, 0.69, 0.94);
+	animation-timing-function: cubic-bezier(0.15, 0.41, 0.69, 0.94);
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+}
+.back_top .arrow {
+	display: none;
+}
+@keyframes scroll {
+	0% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+		opacity: 0;
+	}
+	70% {
+		-webkit-transform: translateY(10px);
+		transform: translateY(10px);
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
 
 
 
