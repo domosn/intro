@@ -1,7 +1,5 @@
 $(function(){
     $('.work_header').click(function(){
-        $(this).toggleClass('active');
-
         if($(this).next().css('display') == 'block') {
             $('.work_header').removeClass('active');
             $('.work_body').slideUp(200, 'linear');
