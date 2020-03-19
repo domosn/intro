@@ -26,7 +26,7 @@ h6 {
 a,
 a.active {
   text-decoration: none;
-  color: #eee;
+  color: #3090b6;
 }
 
 a:hover,
@@ -34,7 +34,7 @@ a.active:hover,
 a:focus,
 a.active:focus {
   text-decoration: none;
-  color: #c3f0ff;
+  color: #005da2;
 }
 
 p {
@@ -255,16 +255,16 @@ img {
 	cursor: pointer;
 }
 
-.main .article .art_body section .work_header:hover {
+.main .article .art_body section .work_header.active {
 	background-color: #bfbfbf;
 }
 
-.main .article .art_body section .work_header:hover time {
-	background-color: #0099cc;
+.main .article .art_body section .work_header.active time {
+	background-color: #005da2;
 }
 
-.main .article .art_body section .work_header:hover::before {
-	border-left-color: #0099cc;
+.main .article .art_body section .work_header.active::before {
+	border-left-color: #005da2;
 }
 
 .main .article .art_body section .work_header::before {
@@ -332,15 +332,18 @@ img {
 	text-indent: 0.5rem;
 }
 
-.main .article .art_body section .work_body .experience span.site_link {
-	text-indent: 3rem;
+.main .article .art_body section .work_body .experience span.project a {
+	border-bottom: 1px solid #3090b6;
+}
+
+.main .article .art_body section .work_body .experience span.project a:hover {
+	border-bottom: 1px solid #005da2;
 }
 
 .main .article .art_body section .work_body .experience img.qr_code {
 	width: 100px;
-	position: absolute;
-	top: 0;
-	right: 0;
+	display: block;
+	margin: auto;
 }
 
 .main .article .art_body section .license .license_name {
