@@ -1,12 +1,11 @@
 $(function(){
+
     $('.work_header').click(function(){
         if($(this).next().css('display') == 'block') {
-            $('.work_header').removeClass('active');
-            $('.work_body').slideUp(200, 'linear');
+            $('.work_header').removeClass('active').next().slideUp(200, 'linear');
             return;
         } else {
-            $('.work_header').removeClass('active');
-            $('.work_body').slideUp(200, 'linear');
+            $('.work_header').removeClass('active').next().slideUp(200, 'linear');
             $(this).addClass('active').next().slideDown(200, 'linear');
         }
     });
@@ -25,5 +24,5 @@ $(function(){
             $('.back_top').fadeOut();
         }
     });
-
+    
 });
