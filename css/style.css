@@ -157,10 +157,6 @@ img {
 	color: #ffffff;
 }
 
-.main .aside ul li h6:hover {
-	background-color: #0099cc;
-}
-
 .main .aside ul li section {
 	display: block;
 	background-color: #fff;
@@ -251,6 +247,19 @@ img {
 	display:-webkit-flex;
 	display:flex;
 	position: relative;
+	cursor: pointer;
+}
+
+.main .article section .work_header:hover {
+	background-color: #bfbfbf;
+}
+
+.main .article section .work_header:hover time {
+	background-color: #0099cc;
+}
+
+.main .article section .work_header:hover::before {
+	border-left-color: #0099cc;
 }
 
 .main .article section .work_header::before {
@@ -289,6 +298,10 @@ img {
 	padding: 5px 0;
 	margin: auto;
 	width: 20%;
+}
+
+.main .article section .work_body {
+	display: none;
 }
 
 .main .article section .work_body .experience {
