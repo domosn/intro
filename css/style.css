@@ -39,6 +39,7 @@ a.active:focus {
 
 p {
 	margin: 0;
+	padding: 2px 0;
 }
 
 hr {
@@ -52,7 +53,7 @@ img {
 }
 
 .bg_block {
-	width: 0%;
+	width: 40%;
 	height: 100%;
 	background-color: #eee;
 	position: fixed;
@@ -275,7 +276,7 @@ img {
 	border-left: 30px solid #3090b6;
 	position: absolute;
 	top: 100%;
-	left: calc(25% + 15px);
+	left: calc(30% + 15px);
 	-moz-transform: translate(-50%, -100%);
 	-ms-transform: translate(-50%, -100%);
 	-webkit-transform: translate(-50%, -100%);
@@ -288,7 +289,8 @@ img {
 	background-color: #3090b6;
 	padding: 5px 0;
 	margin: auto;
-	width: 25%;
+	width: 30%;
+	height: 34px;
 }
 
 .main .article .art_body section .work_header .work_name {
@@ -296,17 +298,23 @@ img {
 	padding: 5px 0px 5px 40px;
 	margin: auto;
 	width: 55%;
+	height: 34px;
 }
 
 .main .article .art_body section .work_header .work_position {
 	font-weight: bold;
 	padding: 5px 0;
 	margin: auto;
-	width: 20%;
+	width: 15%;
+	height: 34px;
 }
 
 .main .article .art_body section .work_body {
 	display: none;
+}
+
+.main .article .art_body section .work_body p {
+	text-indent: 2rem;
 }
 
 .main .article .art_body section .work_body .experience {
@@ -324,7 +332,7 @@ img {
 	width: 16px;
 	height: 16px;
 	border-radius: 50%;
-	background-color: #3090b6;
+	background-color: #005da2;
 	margin-right: 0.5rem;
 }
 
@@ -448,10 +456,6 @@ img {
 	animation-iteration-count: infinite;
 }
 
-.back_top .arrow {
-	display: none;
-}
-
 @keyframes scroll {
 	0% {
 		-webkit-transform: translateY(0);
@@ -480,8 +484,8 @@ img {
 }
 
 .intro {
-	width: 50%;
-	/* height: 400px; */
+	width: 800px;
+	height: auto;
 	background: rgba(255, 255, 255, 0.7);
 	white-space: pre-line;
 	margin: auto;
@@ -576,7 +580,7 @@ img {
 }
 
 @media only screen and (min-width: 600px) {
-	/* For tablets 寬大於600px時 */
+	/* For tablets - 寬大於600px時 */
 	.col-t-1 {width: 8.33%;}
 	.col-t-2 {width: 16.66%;}
 	.col-t-3 {width: 25%;}
@@ -589,14 +593,10 @@ img {
 	.col-t-10 {width: 83.33%;}
 	.col-t-11 {width: 91.66%;}
 	.col-t-12 {width: 100%;}
-
-	.bg_block {
-		width: 38%;
-	}
 }
 
 @media only screen and (min-width: 768px) {
-	/* For desktop 寬大於768px時 */
+	/* For desktop - 寬大於768px時 */
 	.col-d-1 {width: 8.33%;}
 	.col-d-2 {width: 16.66%;}
 	.col-d-3 {width: 25%;}
@@ -609,13 +609,17 @@ img {
 	.col-d-10 {width: 83.33%;}
 	.col-d-11 {width: 91.66%;}
 	.col-d-12 {width: 100%;}
-
-	.bg_block {
-		width: 40%;
-	}
 }
 
-@media all and (max-width: 600px) {
+@media all and (max-width: 797px) {
+	[class*="col-"] {
+		width: 100%;
+	}
+
+	.bg_block {
+		width: 0%;
+	}
+
 	.header {
 		position: relative;
 		top: 0;
@@ -630,5 +634,18 @@ img {
 	.header .header_center {
 		color: #fff;
 		background-color: #3090b6;
+	}
+}
+
+@media all and (max-width: 470px) {
+	.main .article .art_body section .work_header time,
+	.main .article .art_body section .work_header .work_name,
+	.main .article .art_body section .work_header .work_position {
+		height: 60px;
+	}
+
+	.main .article .art_body section .work_header::before {
+		border-top: 30.5px solid transparent;
+		border-bottom: 30.5px solid transparent;
 	}
 }
