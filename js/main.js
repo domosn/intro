@@ -1,5 +1,11 @@
 $(function(){
 
+    $('img.works_demo').click(function(){
+        let imgSrc = $(this).attr('src');
+        let imgElem = "<img src='" + imgSrc + "'>";
+        dialogBoxMsg(imgElem);
+    });
+
     $('.work_header').click(function(){
         if($(this).next().css('display') == 'block') {
             $('.work_header').removeClass('active').next().slideUp(200, 'linear');
@@ -26,3 +32,14 @@ $(function(){
     });
     
 });
+
+function overlay_close() {
+    document.querySelector('.mask').style.display="none";
+}
+
+function dialogBoxMsg(msg) {
+	str="<div class='close_container'><span class='close' onclick='overlay_close()'></span></div><div class='img_container'>"+msg+"</div></div>";
+
+	document.querySelector('.intro').innerHTML=str;
+	document.querySelector('.mask').style.display="flex";
+}
