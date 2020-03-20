@@ -511,7 +511,7 @@ img {
 	top: 50%;
 	left: 0;
 	margin-top: -1px;
-	background: #f03940;
+	background: #3090b6;
 	border-radius: 5px;
 
 	-webkit-transition-duration: 0.15s;
@@ -523,7 +523,7 @@ img {
 
 .close:hover::before,
 .close:hover::after {
-	background: #a8272c;
+	background: #005da2;
 }
 
 .close::before {
