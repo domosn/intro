@@ -246,6 +246,20 @@ img {
 
 .main .article .art_body section {
 	margin: 20px auto;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.main .article .art_body section .work_place i {
+	font-size: 2rem;
+	width: 40px;
+	height: 40px;
+	color: #e94132;
+	border: 2px #e94132 solid;
+	border-radius: 50%;
+	padding: 3px 8px;
+	cursor: pointer;
+	margin: 4px auto;
+	display: block;
 }
 
 .main .article .art_body section .work_header {
@@ -494,6 +508,14 @@ img {
 	line-height: 40px;
 	padding: 10px 20px;
 	border-radius: 10px;
+
+	position: relative;
+	bottom: 100%;
+	transition: bottom 500ms ease;
+	-moz-transition: bottom 500ms ease;
+	-ms-transition: bottom 500ms ease;
+	-o-transition: bottom 500ms ease;
+	-webkit-transition: bottom 500ms ease;
 }
 
 .close {
@@ -557,7 +579,9 @@ img {
 	border-radius: 5px;
 }
 
-.img_container img {
+.ele_container img,
+.ele_container iframe {
+	border: 0;
 	padding: 10px 0 0 0;
 	margin: auto;
 	display: block;
