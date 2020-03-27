@@ -325,6 +325,7 @@ img {
 
 .main .article .art_body section .work_body {
 	display: none;
+	padding: 10px 10px;
 }
 
 .main .article .art_body section .work_body p {
