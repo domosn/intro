@@ -253,17 +253,62 @@ span.highlight {
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
+.main .article .art_body section .work_place {
+	position: relative;
+}
+
+@-webkit-keyframes trackLatest{
+	from{
+		opacity: 0;
+		-webkit-transform: scale(.95);
+		transform: scale(.95)
+	}
+	to {
+		opacity: .75;
+		-webkit-transform: scale(1.35);
+		transform: scale(1.35)
+	}
+}
+@keyframes trackLatest {
+	from{
+		opacity: 0;
+		-webkit-transform: scale(.95);
+		transform: scale(.95)
+	}
+	to {
+		opacity: .75;
+		-webkit-transform: scale(1.35);
+		transform: scale(1.35)
+	}
+}
+
 .main .article .art_body section .work_place i {
 	font-size: 2rem;
 	width: 40px;
 	height: 40px;
 	color: #e94132;
-	border: 2px #e94132 solid;
+	/* border: 2px #e94132 solid; */
 	border-radius: 50%;
 	padding: 3px 8px;
 	cursor: pointer;
 	margin: 4px auto;
 	display: block;
+}
+
+.main .article .art_body section .work_place i::after {
+	content: "";
+	width: 40px;
+	height: 40px;
+	border: 2px #e94132 solid;
+	border-radius: 50%;
+	cursor: pointer;
+	margin: 4px auto;
+	display: block;
+	position: relative;
+	left: -10px;
+	top: -40px;
+	-webkit-animation: .8s cubic-bezier(.17,.67,.83,.67) infinite trackLatest alternate;
+	animation: .8s cubic-bezier(.17,.67,.83,.67) infinite trackLatest alternate;
 }
 
 .main .article .art_body section .work_header {
@@ -591,6 +636,244 @@ span.highlight {
 	margin: auto;
 	display: block;
 }
+
+.contact {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, 0);
+
+    display: -webkit-flex;
+    display: flex;
+    /* -webkit-flex-flow: column nowrap;
+    -moz-flex-flow: column nowrap;
+    -ms-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+	align-items: center; */
+	
+    -moz-transition: background-color .15s linear;
+	-ms-transition: background-color .15s linear;
+	-o-transition: background-color .15s linear;
+	-webkit-transition: background-color .15s linear;
+    transition: background-color .15s linear;
+}
+
+.contact.show {
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.contact .form {
+	margin: auto;
+	width: 100%;
+	max-width: 650px;
+
+	background-color: #ffffff;
+	-moz-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+	box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+
+	position: relative;
+	bottom: 20%;
+	transition: bottom 500ms ease;
+	-moz-transition: bottom 500ms ease;
+	-ms-transition: bottom 500ms ease;
+	-o-transition: bottom 500ms ease;
+	-webkit-transition: bottom 500ms ease;
+}
+
+.contact .form .contactResult {
+	min-height: 46px;
+}
+.contact .form .contactResult .submitSuccess {
+	color: #234600;
+	background-color: #f8fff0;
+	border: 1px solid #be7;
+	padding: 10px;
+}
+
+.contact .form .contactResult .submitFailure{
+	color: #8c2e0b;
+	background-color: #fef5f1;
+	border: 1px solid #ed541d;
+	padding: 10px;
+}
+
+.contact .form .formMain {
+	padding: 20px 40px;
+	overflow: hidden;
+}
+
+.contact .formTitle h3 {
+	padding: 0 0 10px;
+	font-size: 2em;
+	text-align: center;
+}
+
+.contact .formItem {
+	margin: 1em 0;
+}
+
+label {
+	display: block;
+	line-height: 1.4;
+	font-size: 16px;
+	font-weight: bold;
+	color: #606060;
+	width: 100%;
+	cursor: pointer
+}
+
+span.required {
+	color: #f00;
+}
+
+input,
+textarea {
+    border: 1px solid #e2e2e4;
+    outline: 0 none;
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+	margin: .5em 0;
+    line-height: 1.5;
+	font-size: 16px;
+	font-weight: normal;
+    font-family: '微軟正黑體';
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    display: block;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+input {
+	height: 35px;
+	padding: 0;
+	text-indent: 10px;
+}
+
+textarea {
+	height: 90px;
+	min-height: 37px;
+	padding: 7px 10px;
+}
+
+input:focus,
+textarea:focus {
+    border: 1px solid #3090b6;
+    background: #fff;
+    outline: none;
+}
+
+input.error,
+textarea.error {
+    border: 1px solid #dc3545 !important;
+}
+
+.buttonAction {
+	width: 100%;
+
+	display: -webkit-flex;
+	display: flex;
+	
+	-webkit-flex-flow: row nowrap;
+	-moz-flex-flow: row nowrap;
+	-ms-flex-flow: row nowrap;
+	flex-flow: row nowrap;
+	
+	-webkit-box-pack: justify;
+	-moz-box-pack: justify;
+	-ms-flex-pack: justify;
+	
+	-webkit-justify-content: space-between;
+	-moz-justify-content: space-between;
+	justify-content: space-between;
+	
+	-webkit-align-items: center;
+	-moz-align-items: center;
+	align-items: center;
+	
+	-webkit-box-align: center;
+	-moz-box-align: center;
+	
+	-ms-flex-align: center;
+}
+
+button {
+	display: inline-block;
+	cursor: pointer;
+	font-weight: 400;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	border: 1px solid transparent;
+	padding: .375rem .75rem;
+	margin: .5rem 0;
+	font-size: 1rem;
+	line-height: 1.5;
+	border-radius: .25rem;
+	transition: background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
+	background-color: transparent;
+	background-image: none;
+}
+
+button.contactSubmit {
+	color: #3090b6;
+	border-color: #3090b6;
+}
+
+button.contactSubmit:hover,
+button.contactSubmit:active,
+button.contactSubmit:focus {
+	color: #fff;
+	background-color: #3090b6;
+	box-shadow: 0 0 0 .2rem rgba(0, 133, 174, 0.5);
+}
+
+button.contactSubmit.processing {
+	color: #868e96;
+	border-color: #868e96;
+	cursor: wait;
+}
+
+button.contactSubmit.processing:hover,
+button.contactSubmit.processing:active,
+button.contactSubmit.processing:focus {
+	color: #fff;
+	background-color: #868e96;
+	box-shadow: 0 0 0 .2rem hsla(210,7%,56%,.5);
+}
+
+button.contactClose {
+	color: #dc3545;
+	border-color: #dc3545
+}
+
+button.contactClose:hover,
+button.contactClose:active,
+button.contactClose:focus {
+	color: #fff;
+	background-color: #dc3545;
+	box-shadow: 0 0 0 .2rem rgba(220, 53, 69, .5);
+}
+
 
 /*
 .aside {
