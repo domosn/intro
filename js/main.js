@@ -63,6 +63,7 @@ $(function(){
 
         submitData(contactData);
         $(".contactSubmit").addClass("processing").prop("disabled", true).html("處理中");
+        $(".contactClose").prop("disabled", true);
     });
 
     $('.contactClose').click(function(){
@@ -125,10 +126,12 @@ function submitData(data) {
 		success: function(response) {
             $('.contactResult').html("<div class='submitSuccess'>非常感謝您的來信。</div>");
             $(".contactSubmit").removeClass("processing").prop("disabled", false).html("送出");
+            $(".contactClose").prop("disabled", false);
         },
         error: function(){
             $('.contactResult').html("<div class='submitFailure'>伺服器目前忙碌中，請稍後再試。</div>");
             $(".contactSubmit").removeClass("processing").prop("disabled", false).html("送出");
+            $(".contactClose").prop("disabled", false);
         }
 	});
 }
