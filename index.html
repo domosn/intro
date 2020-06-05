@@ -60,7 +60,7 @@
 							<section>性　　別：男</section>
 							<section>籍　　貫：台灣新北市</section>
 							<section>電　　話：<wbr>０９０５－０６１０１７</section>
-							<section>電子信箱：<wbr>domosn1017@gmail.com</section>
+							<section>電子信箱：<wbr><a class="contactMe" href="mailto:domosn1017@gmail.com">domosn1017@gmail.com</a></section>
 						</li>
 						<li>
 							<h6>個人興趣　<small>HOBBIES</small></h6>
@@ -313,7 +313,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-d-12 col-t-12">
-					<p>非常感謝您的耐心閱讀。如果喜歡我的作品，歡迎 <a href="mailto:domosn1017@gmail.com">來信</a> 與我聊聊或持續關注我的作品。</p>
+					<p>非常感謝您的耐心閱讀。如果喜歡我的作品，歡迎 <a class="contactMe" href="mailto:domosn1017@gmail.com">來信</a> 與我聊聊或持續關注我的作品。</p>
 					<p><small>&copy; 2020. All rights reserved.</small></p>
 				</div>
 			</div>
@@ -328,6 +328,34 @@
 
 	<div class="mask" style="display: none;">
 		<div class="intro"></div>
+	</div>
+
+	<div class="contact" style="display:none">
+		<div class="form">
+			<div class="formMain">
+				<div class="formTitle">
+					<h3>聯繫我</h3>
+				</div>
+				<div class="contactResult"></div>
+				<div class="formItem">
+					<label for="contactName">稱謂<span class="required" title="此欄位是必需的。"> * </span></label>
+					<input type="text" name="contactName" id="contactName" placeholder="我該怎麼稱呼您？">
+				</div>
+				<div class="formItem">
+					<label for="contactEmail">聯絡電子信箱<span class="required" title="此欄位是必需的。"> * </span></label>
+					<input type="text" name="contactEmail" id="contactEmail" placeholder="我該回覆您到那個電子信箱？">
+				</div>
+				<div class="formItem">
+					<label for="contactMsg">訊息內容<span class="required" title="此欄位是必需的。"> * </span></label>
+					<textarea name="" id="contactMsg" cols="60" rows="2" placeholder="您要給我的訊息..."></textarea>
+				</div>
+
+				<div class="buttonAction">
+					<button type="button" class="contactSubmit">送出</button>
+					<button type="button" class="contactClose">關閉</button>
+				</div>
+			</div>
+		</div>
 	</div>
 
 	<script src="./vendor/jquery/jquery.min.js"></script>
