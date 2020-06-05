@@ -119,7 +119,7 @@ function dialogBoxMsg(msg) {
 function submitData(data) {
 	$.ajax({
 		type: "get",
-		url: "https://script.google.com/macros/s/AKfycbyQMlF8CMOr3szv9HuRTt4ALhZXK4_FyvU7CwPdtXyq5XpLw1I/exec",
+		url: "https://script.google.com/macros/s/AKfycbyQiG4z2F4tk2Lw3IAbRj0-EqLr7ipVk5dei-06LhctO_kiwdyd/exec",
 		data: data,
 		dataType: "JSON",
 		success: function(response) {
