@@ -151,7 +151,7 @@ function validateForm() {
         $('#contactName').addClass("error");
     }
     if(contactName.length<2){
-        errMsg += "<div>稱謂 欄位至少需要二個字。</div>";
+        errMsg += "<div>稱謂 欄位至少需要2個字元。</div>";
         $('#contactName').addClass("error");
     }
     if(! /^[\u4e00-\u9fa5_a-zA-Z0-9 ]+$/.test(contactName)){
