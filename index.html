@@ -352,7 +352,14 @@
 				</div>
 				<div class="formItem">
 					<label for="contactMsg">訊息內容<span class="required" title="此欄位是必需的。"> * </span></label>
-					<textarea name="" id="contactMsg" cols="60" rows="2" placeholder="您要給我的訊息..."></textarea>
+					<textarea name="contactMsg" id="contactMsg" cols="60" rows="2" placeholder="您要給我的訊息..."></textarea>
+				</div>
+				<div class="formItem">
+					<label for="contactCaptcha">驗證碼(不分大小寫)<span class="required" title="此欄位是必需的。"> * </span></label>
+					<input type="text" name="contactCaptcha" id="contactCaptcha" placeholder="請輸入右邊的驗證碼">
+					<div class="captchaWrap">
+						<span class="captchaStr"></span><span class="refresh"><i class="fa fa-refresh" onclick="getCaptcha();"></i></span>
+					</div>
 				</div>
 
 				<div class="buttonAction">
