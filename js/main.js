@@ -1,4 +1,8 @@
+let verifyStr = '';
+
 $(function(){
+    getCaptcha();
+
     $('.work_place i').click(function(){
         let iframeSrc = $(this).data('geo');
         let iframeElem = "<iframe src='" + iframeSrc + "' width='100%' height='450' frameborder='0' allowfullscreen='' aria-hidden='false' tabindex='0'></iframe>";
@@ -124,9 +128,11 @@ function submitData(data) {
 		data: data,
 		dataType: "JSON",
 		success: function(response) {
-            $('.contactResult').html("<div class='submitSuccess'>非常感謝您的來信。</div>");
+            $('.contactResult').html("<div class='submitSuccess'>訊息已寄出成功，非常感謝您的來信。</div>");
             $(".contactSubmit").removeClass("processing").prop("disabled", false).html("送出");
             $(".contactClose").prop("disabled", false);
+            getCaptcha();
+            $('#contactCaptcha').val("");
         },
         error: function(){
             $('.contactResult').html("<div class='submitFailure'>伺服器目前忙碌中，請稍後再試。</div>");
@@ -144,6 +150,7 @@ function validateForm() {
     let contactName = $('#contactName').val();
     let contactEmail = $('#contactEmail').val();
     let contactMsg = $('#contactMsg').val();
+    let contactCaptcha = $('#contactCaptcha').val();
 	let errMsg = "";
 	
 	if(contactName == ""){
@@ -171,6 +178,14 @@ function validateForm() {
     } else if (contactMsg.length<1){
         errMsg += "<div>訊息內容 欄位至少需要1個字元。</div>";
         $('#contactMsg').addClass("error");
+    }
+
+    if (contactCaptcha == ""){
+        errMsg += "<div>驗證碼 欄位不得為空白。</div>";
+        $('#contactCaptcha').addClass("error");
+    } else if (contactCaptcha.toUpperCase() != verifyStr){
+        errMsg += "<div>驗證碼 輸入錯誤。</div>";
+        $('#contactCaptcha').addClass("error");
     }
 
 	return errMsg;
@@ -207,4 +222,17 @@ function getNow(){
         + second;
 
     return nowDate;
+}
+
+function getCaptcha(len = 4) {
+    let character = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let characterArr = character.split('');
+    verifyStr = '';
+
+    for (i = 0; i < len; i++) {
+        random = characterArr[Math.floor(Math.random() * character.length)];
+        verifyStr += random;
+    }
+    $('.captchaStr').html(verifyStr).attr('title', '驗證碼為' + verifyStr);
+    return verifyStr;
 }
