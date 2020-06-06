@@ -814,6 +814,79 @@ textarea.error {
     border: 1px solid #dc3545 !important;
 }
 
+input#contactCaptcha {
+	width: 40%;
+	float: left;
+}
+
+.captchaWrap {
+	height: 35px;
+	padding: 0;
+	width: 40%;
+	min-width: 110px;
+	margin: .4em 0 .4em 1em;
+	line-height: 1.5;
+	float: left;
+	font-size: 20px;
+	font-weight: bold;
+
+	display: -webkit-flex;
+	display: flex;
+	
+	-webkit-flex-flow: row nowrap;
+	-moz-flex-flow: row nowrap;
+	-ms-flex-flow: row nowrap;
+	flex-flow: row nowrap;
+	
+	-webkit-box-pack: justify;
+	-moz-box-pack: justify;
+	-ms-flex-pack: justify;
+	
+	-webkit-justify-content: start;
+	-moz-justify-content: start;
+	justify-content: start;
+	
+	-webkit-align-items: center;
+	-moz-align-items: center;
+	align-items: center;
+	
+	-webkit-box-align: center;
+	-moz-box-align: center;
+	
+	-ms-flex-align: center;
+}
+
+.captchaWrap .captchaStr {
+	width: 70px;
+	display: inline-block;
+	text-align: center;
+	margin: auto 4px;
+}
+
+.captchaWrap .captchaStr::before {
+	content: "";
+	background: rgba(0,0,0,.1) url(../img/overlay.png);
+	width: 70px;
+	height: 30px;
+	display: block;
+	position: absolute;
+}
+
+.captchaWrap .refresh {
+	width: 30px;
+	display: inline-block;
+	text-align: center;
+}
+
+.captchaWrap .refresh i {
+	cursor: pointer;
+	color: #3090b6;
+}
+
+.captchaWrap .refresh i:hover {
+	color: #005da2;
+}
+
 .buttonAction {
 	width: 100%;
 
