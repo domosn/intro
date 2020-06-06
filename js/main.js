@@ -21,7 +21,7 @@ $(function(){
         }
     });
 
-    $('.contactMe').click(function(e){
+    $('.contactMe, .envelope').click(function(e){
 		document.querySelector('.contact').style.display='flex';
 		setTimeout(function(){
 			$('.contact').addClass('show');
@@ -149,12 +149,10 @@ function validateForm() {
 	if(contactName == ""){
         errMsg += "<div>稱謂 欄位不得為空白。</div>";
         $('#contactName').addClass("error");
-    }
-    if(contactName.length<2){
+    } else if(contactName.length<2){
         errMsg += "<div>稱謂 欄位至少需要2個字元。</div>";
         $('#contactName').addClass("error");
-    }
-    if(! /^[\u4e00-\u9fa5_a-zA-Z0-9 ]+$/.test(contactName)){
+    } else if(! /^[\u4e00-\u9fa5_a-zA-Z0-9 ]+$/.test(contactName)){
         errMsg += "<div>稱謂 欄位只允許使用中文、英文、數字、下劃線(_)及空格字元。</div>";
         $('#contactName').addClass("error");
     }
@@ -162,8 +160,7 @@ function validateForm() {
     if(contactEmail == ""){
         errMsg += "<div>電子信箱 欄位不得為空白。</div>";
         $('#contactEmail').addClass("error");
-    }
-    if(! /^[\w!#$%&\'*+\/=?^`{|}~.-]+@(?:[a-z\d-]+(?:\.[a-z\d][a-z\d-]*)?)+\.(?:[a-z][a-z\d-]+)$/i.test(contactEmail)){
+    } else if(! /^[\w!#$%&\'*+\/=?^`{|}~.-]+@(?:[a-z\d-]+(?:\.[a-z\d][a-z\d-]*)?)+\.(?:[a-z][a-z\d-]+)$/i.test(contactEmail)){
         errMsg += "<div>電子信箱 欄位格式不符。</div>";
         $('#contactEmail').addClass("error");
     }
@@ -171,8 +168,7 @@ function validateForm() {
     if (contactMsg == ""){
         errMsg += "<div>訊息內容 欄位不得為空白。</div>";
         $('#contactMsg').addClass("error");
-    }
-    if (contactMsg.length<1){
+    } else if (contactMsg.length<1){
         errMsg += "<div>訊息內容 欄位至少需要1個字元。</div>";
         $('#contactMsg').addClass("error");
     }
