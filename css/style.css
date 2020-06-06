@@ -823,7 +823,7 @@ input#contactCaptcha {
 	height: 35px;
 	padding: 0;
 	width: 40%;
-	min-width: 110px;
+	min-width: 120px;
 	margin: .4em 0 .4em 1em;
 	line-height: 1.5;
 	float: left;
@@ -857,7 +857,7 @@ input#contactCaptcha {
 }
 
 .captchaWrap .captchaStr {
-	width: 70px;
+	width: 90px;
 	display: inline-block;
 	text-align: center;
 	margin: auto 4px;
@@ -866,7 +866,7 @@ input#contactCaptcha {
 .captchaWrap .captchaStr::before {
 	content: "";
 	background: rgba(0,0,0,.1) url(../img/overlay.png);
-	width: 70px;
+	width: 90px;
 	height: 30px;
 	display: block;
 	position: absolute;
