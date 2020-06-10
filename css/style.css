@@ -716,12 +716,12 @@ span.highlight {
 	border-radius: 4px;
 
 	position: relative;
-	bottom: 20%;
-	transition: bottom 500ms ease;
-	-moz-transition: bottom 500ms ease;
-	-ms-transition: bottom 500ms ease;
-	-o-transition: bottom 500ms ease;
-	-webkit-transition: bottom 500ms ease;
+	top: -10%;
+	transition: top 500ms ease;
+	-moz-transition: top 500ms ease;
+	-ms-transition: top 500ms ease;
+	-o-transition: top 500ms ease;
+	-webkit-transition: top 500ms ease;
 }
 
 .contact .form .contactResult .submitSuccess {
