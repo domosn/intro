@@ -29,7 +29,7 @@ $(function(){
 		document.querySelector('.contact').style.display='flex';
 		setTimeout(function(){
 			$('.contact').addClass('show');
-			document.querySelector('.contact .form').style.bottom = '10%';
+			document.querySelector('.contact .form').style.top = '-5%';
         }, 100);
         
         e.preventDefault();
@@ -71,7 +71,7 @@ $(function(){
     });
 
     $('.contactClose').click(function(){
-		document.querySelector('.contact .form').style.bottom = '20%';
+		document.querySelector('.contact .form').style.top = '-10%';
 		setTimeout(function(){
 			$('.contact').removeClass('show');
 		}, 100);
