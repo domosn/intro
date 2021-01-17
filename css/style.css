@@ -160,11 +160,11 @@ span.highlight {
 	padding: 10px;
 	color: #ffffff;
 	background-color: #3090b6;
-	background-image: linear-gradient(45deg, transparent 86%, #eee 86%, #eee 89%, transparent 89%, transparent 92%, #eee 92%, #eee 95%, transparent 95%);
-	background-image: -moz-linear-gradient(45deg, transparent 86%, #eee 86%, #eee 89%, transparent 89%, transparent 92%, #eee 92%, #eee 95%, transparent 95%);
-	background-image: -webkit-linear-gradient(45deg, transparent 86%, #eee 86%, #eee 89%, transparent 89%, transparent 92%, #eee 92%, #eee 95%, transparent 95%);
-	background-image: -o-linear-gradient(45deg, transparent 86%, #eee 86%, #eee 89%, transparent 89%, transparent 92%, #eee 92%, #eee 95%, transparent 95%);
-	background-image: -ms-linear-gradient(45deg, transparent 86%, #eee 86%, #eee 89%, transparent 89%, transparent 92%, #eee 92%, #eee 95%, transparent 95%);
+	background-image: linear-gradient(45deg, transparent 85%, #eee 86%, #eee 88%, transparent 89%, transparent 91%, #eee 92%, #eee 94%, transparent 95%);
+	background-image: -moz-linear-gradient(45deg, transparent 85%, #eee 86%, #eee 88%, transparent 89%, transparent 91%, #eee 92%, #eee 94%, transparent 95%);
+	background-image: -webkit-linear-gradient(45deg, transparent 85%, #eee 86%, #eee 88%, transparent 89%, transparent 91%, #eee 92%, #eee 94%, transparent 95%);
+	background-image: -o-linear-gradient(45deg, transparent 85%, #eee 86%, #eee 88%, transparent 89%, transparent 91%, #eee 92%, #eee 94%, transparent 95%);
+	background-image: -ms-linear-gradient(45deg, transparent 85%, #eee 86%, #eee 88%, transparent 89%, transparent 91%, #eee 92%, #eee 94%, transparent 95%);
 }
 
 .main .aside ul li section {
