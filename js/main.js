@@ -3,6 +3,13 @@ let verifyStr = '';
 $(function(){
     getCaptcha();
 
+    $(window).on('scroll', function(){
+        let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        let scrolled = (winScroll / height) * 100;
+        document.getElementById('scroll_percentage').style.width = scrolled + "%";
+    });
+
     $('.work_place i').click(function(){
         let iframeSrc = $(this).data('geo');
         let iframeElem = "<iframe src='" + iframeSrc + "' width='100%' height='450' frameborder='0' allowfullscreen='' aria-hidden='false' tabindex='0'></iframe>";
@@ -26,6 +33,7 @@ $(function(){
     });
 
     $('.contactMe, .envelope').click(function(e){
+        $(this).addClass('show');
 		document.querySelector('.contact').style.display='flex';
 		setTimeout(function(){
 			$('.contact').addClass('show');
@@ -36,15 +44,15 @@ $(function(){
     });
 
     $('.contactSubmit').click(function(){
-        $('.contactResult').html("");
+        $('.contactResult').html('');
 
         $("input, textarea").each(function(){
-            $(this).removeClass("error");
+            $(this).removeClass('error');
         });
 
         let err = validateForm();
 
-        if(err != ""){
+        if(err != ''){
             $('.contactResult').html("<div class='submitFailure'>" + err + "</div>");
             return false
         }
@@ -84,6 +92,8 @@ $(function(){
                 $(this).removeClass("error").val("");
             });
 		}, 300);
+        
+        $('.envelope').removeClass('show');
     });
 
     $('.back_top').click(function(){
@@ -100,10 +110,9 @@ $(function(){
             $('.back_top').fadeOut();
         }
     });
-    
 });
 
-function overlay_close() {
+function overlay_close(){
     document.querySelector('.intro').style.bottom = '100%';
     setTimeout(function(){
         document.querySelector('.mask').style.display="none";
@@ -111,7 +120,7 @@ function overlay_close() {
     
 }
 
-function dialogBoxMsg(msg) {
+function dialogBoxMsg(msg){
 	str="<div class='close_container'><span class='close' onclick='overlay_close()'></span></div><div class='ele_container'>"+msg+"</div></div>";
 
 	document.querySelector('.intro').innerHTML=str;
@@ -121,7 +130,7 @@ function dialogBoxMsg(msg) {
     }, 100);
 }
 
-function submitData(data) {
+function submitData(data){
 	$.ajax({
 		type: "get",
 		url: "https://script.google.com/macros/s/AKfycbyQiG4z2F4tk2Lw3IAbRj0-EqLr7ipVk5dei-06LhctO_kiwdyd/exec",
@@ -142,7 +151,7 @@ function submitData(data) {
 	});
 }
 
-function validateForm() {
+function validateForm(){
     $("input, textarea").each(function(){
         $(this).removeClass("error");
     });
@@ -224,7 +233,7 @@ function getNow(){
     return nowDate;
 }
 
-function getCaptcha(len = 4) {
+function getCaptcha(len = 4){
     let character = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
     let characterArr = character.split('');
     verifyStr = '';
