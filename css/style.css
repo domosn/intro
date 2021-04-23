@@ -116,10 +116,6 @@ span.highlight {
 	font-size: 2rem;
 }
 
-.header .header_center h1 a {
-	color: #3090b6;
-}
-
 .main {
 	position: relative;
 	top: 40px;
@@ -210,7 +206,7 @@ span.highlight {
 	margin: 10px 20px auto;
 }
 .line {
-	padding: 5px 20px;
+	padding: 5px 10px;
 }
 .line_title {
 	width: 70px;
@@ -233,7 +229,7 @@ span.highlight {
 	align-items: center;
 }
 .flex-item {
-	padding: 5px 20px;
+	padding: 5px 10px;
 	display: -webkit-box;
 	display: -moz-box;
 	display: -ms-flexbox;
@@ -1126,8 +1122,10 @@ button.contactClose:focus {
 	}
 
 	.header .header_center {
-		color: #fff;
 		background-color: #3090b6;
+	}
+	.header .header_center h1 a {
+		color: #fff;
 	}
 }
 
