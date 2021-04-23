@@ -6,14 +6,16 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 
 	<title>Andy Li | Introduction</title>
-	<meta name="description" content="My resume with related work experience">
+	<meta name="description" content="About my resume with related work experience">
+	<meta name="author" content="Andy Li" />
+	<meta name="keywords" content="resume,cv,introduction,work experience,Andy Li,李光耀,domosn,domosn1017,domosn1017@gmail.com,0905061017"/>
 	<!-- CSS -->
 	<link href="./vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="./css/style.css">
     <!-- Icons -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
-	<link rel="shortcut icon" href="/img/favicon.ico">
+    <!-- <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png"> -->
+	<!-- <link rel="shortcut icon" href="/img/favicon.ico"> -->
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<meta name="google-site-verification" content="kUnd90hoaSQqyvYJZITJQRx2kW84JsdH_v-NuSceXUE" />
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-G2VEFK81SK"></script>
@@ -30,12 +32,15 @@
 <body>
 	<div class="bg_block"></div>
 
+	<div class="progress-container">
+		<div class="progress-bar" id="scroll_percentage"></div>
+	</div>
+
 	<div class="header">
 		<div class="container">
 			<div class="row">
 				<div class="col-d-1 col-t-1 header_left"></div>
-				<div class="col-d-3 col-t-3 header_center"><h1>Resume</h1></div>
-				<!-- <div class="col-d-3 col-t-3 header_center"><h1><a href="./index.html">Resume</a></h1></div> -->
+				<div class="col-d-3 col-t-3 header_center"><h1><a href="javascript:void(0)">Resume</a></h1></div>
 				<div class="col-d-8 col-t-8 header_right"></div>
 			</div>
 		</div>
@@ -57,28 +62,50 @@
 					<ul>
 						<li>
 							<h6>基本訊息　<small>BASIC INFO</small></h6>
-							<section>性　　別：男</section>
-							<section>籍　　貫：台灣新北市</section>
-							<section>電　　話：<wbr>０９０５－０６１０１７</section>
-							<section>電子信箱：<wbr>domosn1017@gmail.com</section>
+							<div class="line-container">
+								<div class="line"><span class="line_title">性別</span>：<span class="line_content">男</span></div>
+								<div class="line"><span class="line_title">籍貫</span>：<span class="line_content">台灣新北市</span></div>
+								<div class="line"><span class="line_title">電話</span>：<span class="line_content">0905-061017</span></div>
+								<div class="line"><span class="line_title">電子信箱</span>：<wbr><span class="line_content">domosn1017@gmail.com</span></div>
+							</div>
 						</li>
 						<li>
 							<h6>個人興趣　<small>HOBBIES</small></h6>
-							<section>投資理財、運動、閱讀、音樂</section>
+							<div class="flex-container">
+								<div class="flex-item">投資理財</div>
+								<div class="flex-item">運動</div>
+								<div class="flex-item">閱讀</div>
+								<div class="flex-item">音樂</div>
+							</div>
 						</li>
 						<li>
 							<h6>語言能力　<small>LANGUAGE</small></h6>
-							<section>英　　文：中等</section>
-							<section>台　　語：中上</section>
+							<div class="line-container">
+								<div class="line"><span class="line_title">英文</span>：<span class="line_content">中等</span></div>
+								<div class="line"><span class="line_title">台語</span>：<span class="line_content">中上</span></div>
+							</div>
 						</li>
 						<li>
 							<h6>其它專長　<small>TECH. EXPERTISE</small></h6>
-							<section>OFFICE應用、VBA、Drupal7</section>
-							<section>Laravel 5.6、VueJS、bootstrap</section>
-							<section>debian、ansible 2.7、HTML5</section>
-							<section>CSS3、JavaScript、jQuery</section>
-							<section>jQuery UI、PHP7</section>
-							<section>PhotoShop、Illustrator</section>
+							<div class="flex-container">
+								<div class="flex-item">OFFICE應用</div>
+								<div class="flex-item">VBA</div>
+								<div class="flex-item">MySql</div>
+								<div class="flex-item">Drupal7</div>
+								<div class="flex-item">Laravel 7.x</div>
+								<div class="flex-item">VueJS</div>
+								<div class="flex-item">bootstrap</div>
+								<div class="flex-item">debian</div>
+								<div class="flex-item">ansible 2.7</div>
+								<div class="flex-item">HTML5</div>
+								<div class="flex-item">CSS3</div>
+								<div class="flex-item">JavaScript</div>
+								<div class="flex-item">jQuery</div>
+								<div class="flex-item">jQuery UI</div>
+								<div class="flex-item">PHP7</div>
+								<div class="flex-item">PhotoShop</div>
+								<div class="flex-item">Illustrator</div>
+							</div>
 						</li>
 					</ul>
 				</div>
@@ -95,18 +122,51 @@
 					<div class="art_body">
 						<section>
 							<div class="work_header active">
+								<time>2020.07 - 仍在職</time>
+								<span class="work_name">光暉服飾有限公司</span>
+								<span class="work_position">網頁工程師</span>
+							</div>
+
+							<div class="work_body" style="display: block;">
+								<div class="work_place">
+									<i class="fa fa-map-marker" aria-hidden="true" data-geo="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d903.6077499511435!2d121.50917082917809!3d25.053377013923058!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a913c71c19b9%3A0xc433a8413ee0efaa!2z5YWJ5pqJ5pyN6aO-!5e0!3m2!1szh-TW!2stw!4v1616382573124!5m2!1szh-TW!2stw"></i>
+								</div>
+
+								<div class="experience">
+									<span class="project">內部 <a href="http://110.43.52.70" target="_blank">成本報價</a> 系統</span>
+									<div class="demo">
+										<img class="works_demo" src="./img/pdm/pdm_log_in.jpg">
+										<img class="works_demo" src="./img/pdm/pdm_sign_in.jpg">
+										<img class="works_demo" src="./img/pdm/pdm_permission.jpg">
+										<img class="works_demo" src="./img/pdm/pdm_product_cost.jpg">
+										<img class="works_demo" src="./img/pdm/pdm_watch_dog.jpg">
+									</div>
+								</div>
+
+								<div class="experience">
+									<span class="project">New <a href="http://110.43.52.70/intro" target="_blank">Landing Page</a></span>
+									<div class="demo">
+										<img class="works_demo" src="./img/pdm/front/pdm_desktop.jpg">
+										<img class="works_demo" src="./img/pdm/front/pdm_mobile.jpg">
+									</div>
+								</div>
+							</div>
+						</section>
+
+						<section>
+							<div class="work_header">
 								<time>2019.10 - 2020.03</time>
 								<span class="work_name">寶島極光股份有限公司</span>
 								<span class="work_position">軟體工程師</span>
 							</div>
 
-							<div class="work_body" style="display: block;">
+							<div class="work_body">
 								<div class="work_place">
 									<i class="fa fa-map-marker" aria-hidden="true" data-geo="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3613.4555286773834!2d121.52050731552814!3d25.08643688394778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442aeb1007a4553%3A0x1db4c5ef3a8c58aa!2zMTEx5Y-w5YyX5biC5aOr5p6X5Y2A5om_5b636Lev5Zub5q61MTcy6JmfNw!5e0!3m2!1szh-TW!2stw!4v1585291785907!5m2!1szh-TW!2stw"></i>
 								</div>
 
 								<div class="experience">
-									<span class="project">年終活動 <a href="http://www.econfirmation.com.tw/vtgame2021/game/" target="_blank">４ｘ４ 翻牌遊戲</a> 頁面</span>
+									<span class="project">年終活動 <a href="http://www.econfirmation.com.tw/vtgame2021/game/" target="_blank">4 x 4 翻牌遊戲</a> 頁面</span>
 									<div class="demo">
 										<img class="works_demo" src="./img/game/game_bet_open.jpg">
 										<img class="works_demo" src="./img/game/game_start.jpg">
@@ -116,7 +176,7 @@
 								</div>
 
 								<div class="experience">
-									<span class="project">年終活動 <a href="http://www.econfirmation.com.tw/vtgame2021/QRencode/" target="_blank">報到及下注</a>  頁面(下QR Code)</span>
+									<span class="project">年終活動 <a href="http://www.econfirmation.com.tw/vtgame2021/QRencode/" target="_blank">報到及下注</a> 頁面(下QR Code)</span>
 									<img class="qr_code" src="./img/site_qr/game_qr.png" alt="公司2019年終活動報到及下注頁面的qr code">
 									<div class="demo">
 										<img class="works_demo" src="./img/register_bet/qr_register.jpg">
@@ -157,16 +217,25 @@
 								<p>挑戰了從金融跨領域到資訊。在學會各種網域名稱及網頁專有名詞術語後，仍成功將VBA程式引入行銷、客服部門。除了提高部門資訊處理效率外，公司也連續二年參與台灣網路資訊中心(TWNIC)專案活動並達到標準，更在域名拍賣中為域名年均營收提高1.57%(域名年均毛利的3.65%)。</p>
 								<p>在接手公司Drupal Framework期間，不僅學會網頁編寫及排版，加強自身的專業技能之外，也替公司的子網站外觀成功翻新並且加入響應式(Resopnsive Web Design)設計。除此之外，也藉由完成下列幾個專案，協助客服人員降低mail的使用率、行銷人員業務活動的推廣等。</p>
 								<div class="experience">
-									<span class="project"><a href="https://wiki.net-chinese.com.tw/cht" target="_blank">域名百科</a> 外觀翻新及加入RWD(下QR Code)</span>
-									<img class="qr_code" src="./img/site_qr/wiki_qr.png" alt="域名百科首頁的qr code">
+									<span class="project"><a href="https://wiki.net-chinese.com.tw/cht" target="_blank">域名百科</a> 外觀翻新及加入RWD</span>
+									<!-- <img class="qr_code" src="./img/site_qr/wiki_qr.png" alt="域名百科首頁的qr code"> -->
+									<div class="demo">
+										<img class="works_demo" src="./img/net-chinese/wiki_desktop.jpg">
+										<img class="works_demo" src="./img/net-chinese/wiki_mobile.jpg">
+									</div>
 								</div>
-
 								<div class="experience">
 									<span class="project"><a href="https://wiki.net-chinese.com.tw/user/register/nc_user" target="_blank">Ticket System</a></span>
+									<div class="demo">
+										<img class="works_demo" src="./img/net-chinese/wiki_ticket_system.jpg">
+									</div>
 								</div>
 
 								<div class="experience">
 									<span class="project"><a href="https://wiki.net-chinese.com.tw/2019年網路中文域名研討會問卷" target="_blank">行銷活動前置問卷</a> (已下線)</span>
+									<div class="demo">
+										<img class="works_demo" src="./img/net-chinese/wiki_questionnaire.jpg">
+									</div>
 								</div>
 
 								<div class="experience">
@@ -175,6 +244,9 @@
 
 								<div class="experience">
 									<span class="project"><a href="https://wiki.net-chinese.com.tw/node/9701" target="_blank">經銷商月報</a></span>
+									<div class="demo">
+										<img class="works_demo" src="./img/net-chinese/wiki_distributor.jpg">
+									</div>
 								</div>
 
 								<div class="experience">
