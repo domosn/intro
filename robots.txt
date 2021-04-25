@@ -105,4 +105,4 @@ Disallow: /?q=user/logout/
 Disallow: /?q=node/
 
 # Google sitemap
-Sitemap: https://domosn.github.io/introduction/sitemap.xml
+Sitemap: https://domosn.github.io/intro/sitemap.xml
