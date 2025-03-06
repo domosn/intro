@@ -1,28 +1,28 @@
 let verifyStr = '';
 
-$(function() {
+$(function () {
     getCaptcha();
 
-    $(window).on('scroll', function() {
+    $(window).on('scroll', function () {
         let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
         let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
         let scrolled = (winScroll / height) * 100;
         document.getElementById('scroll_percentage').style.width = scrolled + "%";
     });
 
-    $('.work_place i').click(function() {
+    $('.work_place i').click(function () {
         let iframeSrc = $(this).data('geo');
         let iframeElem = "<iframe src='" + iframeSrc + "' width='100%' height='450' frameborder='0' allowfullscreen='' aria-hidden='false' tabindex='0'></iframe>";
         dialogBoxMsg(iframeElem);
     });
 
-    $('img.works_demo, .slide_ele img').click(function() {
+    $('img.works_demo, .slide_ele img').click(function () {
         let imgSrc = $(this).attr('src');
         let imgElem = "<img src='" + imgSrc + "'>";
         dialogBoxMsg(imgElem);
     });
 
-    $('.work_header').click(function() {
+    $('.work_header').click(function () {
         if ($(this).next().css('display') == 'block') {
             $('.work_header').removeClass('active').next().slideUp(200, 'linear');
             return;
@@ -32,10 +32,10 @@ $(function() {
         }
     });
 
-    $('.contactMe, .envelope').click(function(e) {
+    $('.contactMe, .envelope').click(function (e) {
         $(this).addClass('show');
         document.querySelector('.contact').style.display = 'flex';
-        setTimeout(function() {
+        setTimeout(function () {
             $('.contact').addClass('show');
             document.querySelector('.contact .form').style.top = '-5%';
         }, 100);
@@ -43,10 +43,10 @@ $(function() {
         e.preventDefault();
     });
 
-    $('.contactSubmit').click(function() {
+    $('.contactSubmit').click(function () {
         $('.contactResult').html('');
 
-        $("input, textarea").each(function() {
+        $("input, textarea").each(function () {
             $(this).removeClass('error');
         });
 
@@ -78,17 +78,17 @@ $(function() {
         $(".contactClose").prop("disabled", true);
     });
 
-    $('.contactClose').click(function() {
+    $('.contactClose').click(function () {
         document.querySelector('.contact .form').style.top = '-10%';
-        setTimeout(function() {
+        setTimeout(function () {
             $('.contact').removeClass('show');
         }, 100);
-        setTimeout(function() {
+        setTimeout(function () {
             document.querySelector('.contact').style.display = 'none';
 
             $('.contactResult').html("");
 
-            $("input, textarea").each(function() {
+            $("input, textarea").each(function () {
                 $(this).removeClass("error").val("");
             });
         }, 300);
@@ -96,13 +96,13 @@ $(function() {
         $('.envelope').removeClass('show');
     });
 
-    $('.back_top').click(function() {
+    $('.back_top').click(function () {
         $('html, body').animate({
             scrollTop: 0
         }, 'swing');
     });
 
-    $(document).scroll(function() {
+    $(document).scroll(function () {
         var currentY = $(this).scrollTop();
         if (currentY > 10) {
             $('.back_top').fadeIn();
@@ -114,7 +114,7 @@ $(function() {
 
 function overlay_close() {
     document.querySelector('.intro').style.bottom = '100%';
-    setTimeout(function() {
+    setTimeout(function () {
         document.querySelector('.mask').style.display = "none";
     }, 500);
 
@@ -125,7 +125,7 @@ function dialogBoxMsg(msg) {
 
     document.querySelector('.intro').innerHTML = str;
     document.querySelector('.mask').style.display = "flex";
-    setTimeout(function() {
+    setTimeout(function () {
         document.querySelector('.intro').style.bottom = '0%';
     }, 100);
 }
@@ -136,14 +136,14 @@ function submitData(data) {
         url: "https://script.google.com/macros/s/AKfycbyQiG4z2F4tk2Lw3IAbRj0-EqLr7ipVk5dei-06LhctO_kiwdyd/exec",
         data: data,
         dataType: "JSON",
-        success: function(response) {
+        success: function (response) {
             $('.contactResult').html("<div class='submitSuccess'>訊息已寄出成功，非常感謝您的來信。</div>");
             $(".contactSubmit").removeClass("processing").prop("disabled", false).html("送出");
             $(".contactClose").prop("disabled", false);
             getCaptcha();
             $('#contactCaptcha').val("");
         },
-        error: function() {
+        error: function () {
             $('.contactResult').html("<div class='submitFailure'>伺服器目前忙碌中，請稍後再試。</div>");
             $(".contactSubmit").removeClass("processing").prop("disabled", false).html("送出");
             $(".contactClose").prop("disabled", false);
@@ -152,7 +152,7 @@ function submitData(data) {
 }
 
 function validateForm() {
-    $("input, textarea").each(function() {
+    $("input, textarea").each(function () {
         $(this).removeClass("error");
     });
 
@@ -244,4 +244,36 @@ function getCaptcha(len = 4) {
     }
     $('.captchaStr').html(verifyStr).attr('title', '驗證碼為' + verifyStr);
     return verifyStr;
+}
+
+
+let slideIndex = 1;
+showSlides(slideIndex);
+// Next/previous controls
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("slide_ele");
+    var dots = document.getElementsByClassName("cursor");
+    if (n > slides.length) {
+        slideIndex = 1
+    }
+    if (n < 1) {
+        slideIndex = slides.length
+    }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
 }
